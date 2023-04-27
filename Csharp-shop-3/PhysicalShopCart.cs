@@ -16,6 +16,7 @@ namespace csharp_shop_2
 		// COSTRUTTORE
 		public PhysicalShopCart(int maxProductsInCart)
 		{
+			numberOfPhysicalShopCart++;
 			this.maxProductsInCart = maxProductsInCart;
 			this.productsInCart = new List<Product>();
 		}

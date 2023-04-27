@@ -17,9 +17,11 @@ namespace csharp_shop_2
 		//COSTRUCTOR
 		public BagOfFruits(string name, string description, float priceOfBag, string categoryName, string typeOfBag, int maxNumberOfFruits, int tax = 22) : base(name, description, priceOfBag, categoryName, tax)
 		{
+			this.fruitsInBag = new List<Fruit>();
 			this.typeOfBag = typeOfBag;
 			this.maxNumberOfFruits = maxNumberOfFruits;
-			this.fruitsInBag = new List<Fruit>();
+			
+
 		}
 
 		//GETTERS
@@ -44,6 +46,12 @@ namespace csharp_shop_2
 			if (this.fruitsInBag.Count < maxNumberOfFruits)
 			{
 				this.fruitsInBag.Add(newFruit);
+			}
+			else
+			{
+
+				throw new Exception("Non puoi mettere un numero di frutti superiore a maxNumberOfFruits.");
+				
 			}
 		}
 
